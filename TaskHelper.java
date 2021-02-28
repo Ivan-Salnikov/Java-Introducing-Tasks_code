@@ -1,6 +1,8 @@
-package by.jonline.task01.main;
+package by.jonline.task02.main;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 public class TaskHelper {
     public String GetUserInput (String prompt) {
         String inputLine = null;
@@ -15,4 +17,20 @@ public class TaskHelper {
         return inputLine;
 
     }
+    
+    public static void bubbleSort(int[] arr){
+        /*The outer loop shortens the fragment of the array each time, since the inner loop each time puts the maximum element at the end of the fragment*/   
+        
+    	for(int i = arr.length-1 ; i > 0 ; i--){
+            for(int j = 0 ; j < i ; j++){
+                /*Compare the elements in pairs, if they are in the wrong order, then swap them*/
+                if( arr[j] > arr[j+1] ){
+                    int tmp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tmp;
+                }
+            }
+        }
+    }
+    
 }
